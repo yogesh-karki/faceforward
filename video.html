@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face Forward</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css"
+      integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./fonts/ivymode/stylesheet.css" />
+    <link rel="stylesheet" href="./fonts/cera/stylesheet.css" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="wrap">
+          <div class="logo">
+            <a href="">
+              <img src="./images/logo.svg" alt="" />
+            </a>
+          </div>
+
+          <div class="nav_menu">
+            <ul>
+              <li><a href="">About</a></li>
+              <li><a href="">Services</a></li>
+              <li><a href="">Doctors</a></li>
+              <li><a href="">Contact</a></li>
+              <li class="nav_btn">
+                <a href=""
+                  ><ion-icon name="calendar-clear-outline"></ion-icon> Book
+                  Appointment</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="scrollContainer">
+      <section class="banner video_banner">
+        <video
+          class="featured_video"
+          poster=""
+          autoplay="autoPlay"
+          playsinline="playsInline"
+          muted="muted"
+          loop="loop"
+        >
+          <source src="./images/carbon facial.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section class="intro">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <div class="img_wrapper">
+                <div class="img img1 image_container">
+                  <img src="./images/about1.jpg" alt="" />
+                </div>
+
+                <div class="img img2 image_container">
+                  <img src="./images/about2.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="intro_text text_container">
+                <h3>Open your <em>mind</em></h3>
+
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                  consequuntur praesentium accusamus dolorum omnis
+                </p>
+
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Sapiente
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="div_anim">
+        <svg viewBox="0 0 100 50">
+          <rect x="65" y="30" width="15" height="15" fill="transparent" />
+          <rect x="75" y="0" width="25" height="50" fill="transparent" />
+          <rect x="15" y="0" width="15" height="15" fill="transparent" />
+          <rect x="0" y="10" width="20" height="30" fill="transparent" />
+
+          <image
+            preserveAspectRatio="xMidYMid slice"
+            class="right1"
+            x="75"
+            y="0"
+            width="25"
+            height="50"
+            href="./images/amazing2.jpg"
+          />
+
+          <image
+            class="left2"
+            preserveAspectRatio="xMidYMid slice"
+            x="15"
+            y="0"
+            width="15"
+            height="15"
+            href="./images/banner.jpg"
+          />
+
+          <image
+            class="left1"
+            preserveAspectRatio="xMidYMid slice"
+            x="0"
+            y="10"
+            width="20"
+            height="30"
+            href="./images/amazing1.jpg"
+          />
+
+          <image
+            class="right2"
+            preserveAspectRatio="xMidYMid slice"
+            x="65"
+            y="30"
+            width="15"
+            height="15"
+            href="./images/about2.jpg"
+          />
+        </svg>
+
+        <div class="text_bigger">
+          <div class="text_pin">
+            <h3>Let's make you <em>look amazing</em> together</h3>
+          </div>
+        </div>
+      </section>
+
+      <section class="treatments">
+        <div class="options">
+          <div class="option_for" id="option_for_female">
+            <div>
+              <h5>Selection</h5>
+              <h3>Female</h3>
+              <img class="act_bg_img" src="./images/female.jpg" alt="" />
+            </div>
+          </div>
+
+          <div class="option_for" id="option_for_male">
+            <div>
+              <h5>Selection</h5>
+              <h3>Male</h3>
+              <img class="act_bg_img" src="./images/male.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="products">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-3">
+              <div class="product_head text_container">
+                <h3>Explore <em>our collections</em></h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Delectus, cupiditate!
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-9">
+              <div class="products_slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="">
+                      <img src="./images/product.png" alt="" />
+
+                      <div class="detail">
+                        <h5>Rose Jelly</h5>
+                        <p>Gentle Makeup Remover</p>
+
+                        <label>Discover</label>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="">
+                      <img src="./images/product.png" alt="" />
+
+                      <div class="detail">
+                        <h5>Rose Jelly</h5>
+                        <p>Gentle Makeup Remover</p>
+
+                        <label>Discover</label>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="">
+                      <img src="./images/product.png" alt="" />
+
+                      <div class="detail">
+                        <h5>Rose Jelly</h5>
+                        <p>Gentle Makeup Remover</p>
+
+                        <label>Discover</label>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="">
+                      <img src="./images/product.png" alt="" />
+
+                      <div class="detail">
+                        <h5>Rose Jelly</h5>
+                        <p>Gentle Makeup Remover</p>
+
+                        <label>Discover</label>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="">
+                      <img src="./images/product.png" alt="" />
+
+                      <div class="detail">
+                        <h5>Rose Jelly</h5>
+                        <p>Gentle Makeup Remover</p>
+
+                        <label>Discover</label>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="">
+                      <img src="./images/product.png" alt="" />
+
+                      <div class="detail">
+                        <h5>Rose Jelly</h5>
+                        <p>Gentle Makeup Remover</p>
+
+                        <label>Discover</label>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="experiments">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-7">
+              <div class="exp_img image_container">
+                <img src="./images/skincare.png" alt="" />
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <div class="exp_text text_container">
+                <h3>No science experiments. Just great skincare</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet
+                  sequi tempora veniam rem illo iure dolore inventore!
+                </p>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Voluptate doloribus aspernatur molestiae modi voluptates?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="footer_img">
+                <img src="./images/logo.svg" alt="" />
+              </div>
+
+              <div class="newsletter">
+                <input type="text" placeholder="Stay in Touch" />
+                <button>Suscribe</button>
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <div class="footer_info">
+                <div class="locations">
+                  <div class="loc_card">
+                    <h4>Lalitpur</h4>
+
+                    <label>Address</label>
+                    <p>Lalitpur, Krishna Galli 5th Floor Bhatbhateni</p>
+
+                    <label>Tel:</label>
+                    <p>977 9851080710, 9801304856</p>
+                  </div>
+
+                  <div class="loc_card">
+                    <h4>Kathmandu</h4>
+
+                    <label>Address</label>
+                    <p>Maharajgunj, Chakrapath, Metro Kathmandu Hospital</p>
+
+                    <label>Tel:</label>
+                    <p>977 01 254685</p>
+                  </div>
+                </div>
+
+                <div class="socail_links">
+                  <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href=""><i class="fa-brands fa-instagram"></i></a>
+                  <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer_bottom">
+            <div class="copyright">
+              <p>© COPYRIGHT 2022. ALL RIGHTS RESERVED</p>
+            </div>
+
+            <div class="goto_top">
+              <a href="">
+                <i class="fa-solid fa-arrow-up"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js"></script>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/main.js"></script>
+</html>
