@@ -1,12 +1,3 @@
-$(window).on("scroll", function () {
-  console.log("hello");
-  if ($(this).scrollTop() > 200) {
-    $(".header").addClass("fix-head");
-  } else {
-    $(".header").removeClass("fix-head");
-  }
-});
-
 var swiper = new Swiper(".banner_slider", {
   speed: 1500,
   parallax: true,

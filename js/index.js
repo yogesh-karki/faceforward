@@ -29,6 +29,25 @@ ScrollTrigger.scrollerProxy(".scrollContainer", {
     : "fixed",
 });
 
+gsap.to(".header", {
+  scrollTrigger: {
+    trigger: ".header",
+    start: "bottom+=300% top",
+    scroller: ".scrollContainer",
+    toggleActions: "restart none none reset",
+    onEnter: headerFix,
+    onLeaveBack: headerNotFix,
+  },
+});
+
+function headerNotFix() {
+  document.querySelector(".header").classList.remove("sticky");
+}
+
+function headerFix() {
+  document.querySelector(".header").classList.add("sticky");
+}
+
 let imageContainers = document.querySelectorAll(".image_container");
 
 imageContainers.forEach((container) => {
