@@ -21,7 +21,16 @@
 }
 
 .accomplishment {
+  margin-top: 40px;
   padding: 80px 0;
+  background: #fbf8f3;
+
+  p {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 60px;
+  }
 
   .row {
     width: 890px;
@@ -33,8 +42,129 @@
     text-align: center;
 
     img {
-      width: 170px;
+      width: 100px;
       margin: 0 auto 15px;
+    }
+
+    h4 {
+      max-width: 150px;
+      margin: auto;
+      color: #3f3d3a;
+    }
+  }
+}
+
+.mission {
+  padding: 20px 0 100px;
+
+  .row {
+    margin-left: -50px;
+    margin-right: -50px;
+
+    .col-md-4 {
+      &:nth-child(even) {
+        margin-top: 200px;
+      }
+    }
+  }
+
+  .mcard {
+    padding: 40px;
+
+    figure {
+      margin-bottom: 40px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.team {
+  padding: 0 0 80px;
+  margin-bottom: 150px;
+
+  .team_head {
+    text-align: center;
+    margin: 0 auto 100px;
+    width: 550px;
+    max-width: 100%;
+
+    label {
+      color: #149a9a;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-size: 44px;
+      margin-bottom: 25px;
+    }
+  }
+
+  .team_card {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+      .text {
+        a {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 60%;
+      height: 100%;
+      content: "";
+      background: #fbf8f3;
+      z-index: -1;
+    }
+
+    .team_img {
+      width: 50%;
+      text-align: right;
+
+      img {
+        width: 90%;
+      }
+    }
+
+    .text {
+      width: 50%;
+      padding-left: 30px;
+      padding-top: 100px;
+
+      a {
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(20px);
+
+        span {
+          color: #e974ae;
+          text-transform: uppercase;
+        }
+
+        img {
+          width: 65px;
+          height: 65px;
+          object-fit: contain;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 478px;
+      object-fit: cover;
     }
   }
 }
