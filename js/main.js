@@ -9,7 +9,7 @@ var swiper = new Swiper(".banner_slider", {
   },
 });
 
-var swiper = new Swiper(".products_slider", {
+var swiperProducts = new Swiper(".products_slider", {
   speed: 1500,
   spaceBetween: 40,
   slidesPerView: 3,
@@ -17,6 +17,20 @@ var swiper = new Swiper(".products_slider", {
     delay: 4500,
     disableOnInteraction: false,
   },
+});
+
+var swiperClients = new Swiper(".clients_slider", {
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  slidesPerView: 1.5,
+  spaceBetween: 50,
+  centeredSlides: true,
 });
 
 var genderBox = document.querySelector(".treatments");
