@@ -246,6 +246,10 @@ header {
 .page_banner {
   background-position: center !important;
   background-size: cover !important;
+
+  &.blog_banner {
+    height: 60vh;
+  }
 }
 
 .banner {

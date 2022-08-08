@@ -19,6 +19,16 @@ var swiperProducts = new Swiper(".products_slider", {
   },
 });
 
+var swiperContact = new Swiper(".contact_slider", {
+  speed: 1500,
+  spaceBetween: 40,
+  slidesPerView: 1,
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+  },
+});
+
 var swiperClients = new Swiper(".clients_slider", {
   pagination: {
     el: ".swiper-pagination",
