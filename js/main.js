@@ -9,13 +9,41 @@ var swiper = new Swiper(".banner_slider", {
   },
 });
 
-var swiperProducts = new Swiper(".products_slider", {
+var swiperGallery = new Swiper(".gallery_slider", {
   speed: 1500,
-  spaceBetween: 40,
-  slidesPerView: 3,
+  parallax: true,
+  spaceBetween: 0,
+  centeredSlides: true,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
   autoplay: {
     delay: 4500,
     disableOnInteraction: false,
+  },
+});
+
+var swiperProducts = new Swiper(".products_slider", {
+  speed: 1500,
+
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 1.5,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
   },
 });
 
@@ -38,9 +66,22 @@ var swiperClients = new Swiper(".clients_slider", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  slidesPerView: 1.5,
-  spaceBetween: 50,
+
   centeredSlides: true,
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    1024: {
+      slidesPerView: 1.5,
+      spaceBetween: 50,
+    },
+  },
 });
 
 var genderBox = document.querySelector(".treatments");
@@ -57,5 +98,25 @@ if (genderBox) {
   forMale.addEventListener("mouseover", () => {
     var imgSrc = forMale.querySelector("img").getAttribute("src");
     genderBox.style.backgroundImage = "url(" + imgSrc + ")";
+  });
+}
+
+var items = document.querySelectorAll(".treat_list .list");
+
+if (items) {
+  items.forEach((el) => {
+    const image = el.querySelector("img");
+
+    el.addEventListener("mouseenter", (e) => {
+      gsap.to(image, { autoAlpha: 1 });
+    });
+
+    el.addEventListener("mouseleave", (e) => {
+      gsap.to(image, { autoAlpha: 0 });
+    });
+
+    el.addEventListener("mousemove", (e) => {
+      gsap.set(image, { x: e.offsetX - 200, y: e.offsetY - 10 });
+    });
   });
 }

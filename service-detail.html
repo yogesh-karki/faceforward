@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face Forward</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css"
+      integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./fonts/ivymode/stylesheet.css" />
+    <link rel="stylesheet" href="./fonts/cera/stylesheet.css" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="wrap">
+          <div class="logo">
+            <a href="index.html">
+              <img src="./images/logo.svg" alt="" />
+            </a>
+          </div>
+
+          <div class="nav_menu">
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li class="active"><a href="services.html">Services</a></li>
+              <li><a href="blogs.html">Blogs</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li class="nav_btn">
+                <a href=""
+                  ><ion-icon name="calendar-clear-outline"></ion-icon> Book
+                  Appointment</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="scrollContainer">
+      <section
+        class="banner page_banner"
+        style="background: url(./images/maxresdefault.jpg)"
+      >
+        <div class="text_wrap">
+          <p>Skin Treatments</p>
+          <h1>Hydra Therapy</h1>
+        </div>
+      </section>
+
+      <section class="treatment_int">
+        <div class="container">
+          <div class="wrap">
+            <div class="list">
+              <ul>
+                <li><p>Duration: N/A</p></li>
+                <li><p>5 (100%) 61 votes</p></li>
+                <li><p>Duration: N/A</p></li>
+              </ul>
+            </div>
+
+            <div class="text text_container">
+              <p>
+                Acne is an inflammatory disease of the sebaceous glands; it
+                usually occurs during puberty in adolescents and young people,
+                from the age of 12 years to 25 years
+              </p>
+
+              <p>
+                It usually occurs during puberty in adolescents and young
+                people, from the age of 12 years to 25 years
+              </p>
+            </div>
+          </div>
+
+          <div class="schedule_btn">
+            <a href="" target="_blank"
+              >Schedule a consultation
+              <i class="fas fa-external-link-square"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="treatment_photo">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5">
+              <div id="comparison">
+                <div class="overlay_label" id="overlay">
+                  <div class="label before">Before</div>
+                  <div class="label after">After</div>
+                </div>
+                <figure
+                  style="
+                    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/photoshop-face-before.jpg);
+                  "
+                >
+                  <!-- Before Image -->
+
+                  <div id="handle"></div>
+                  <div
+                    id="divisor"
+                    style="
+                      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/photoshop-face-after.jpg);
+                    "
+                  ></div>
+                  <!-- After Image -->
+                </figure>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  id="slider"
+                  oninput="moveDivisor()"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-7">
+              <div class="faqs">
+                <div class="accordion" id="accordionExample">
+                  <div class="card">
+                    <div class="card-header" id="headingOne">
+                      <h2 class="mb-0">
+                        <button
+                          class="btn btn-link btn-block text-left"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          How many treatments will I need?
+                        </button>
+                        <i class="fa-solid fa-chevron-down"></i>
+                      </h2>
+                    </div>
+
+                    <div
+                      id="collapseOne"
+                      class="collapse"
+                      aria-labelledby="headingOne"
+                      data-parent="#accordionExample"
+                    >
+                      <div class="card-body">
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Fugit sunt vel praesentium enim odit quo
+                          inventore aspernatur ratione nihil reiciendis qui,
+                          animi vero a aut?
+                        </p>
+
+                        <p>
+                          Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Optio beatae blanditiis facilis et unde. Totam!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingTwo">
+                      <h2 class="mb-0">
+                        <button
+                          class="btn btn-link btn-block text-left collapsed"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo"
+                        >
+                          How long are LED Light Therapy treatments?
+                        </button>
+                        <i class="fa-solid fa-chevron-down"></i>
+                      </h2>
+                    </div>
+                    <div
+                      id="collapseTwo"
+                      class="collapse"
+                      aria-labelledby="headingTwo"
+                      data-parent="#accordionExample"
+                    >
+                      <div class="card-body">
+                        Some placeholder content for the second accordion panel.
+                        This panel is hidden by default.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <h2 class="mb-0">
+                        <button
+                          class="btn btn-link btn-block text-left collapsed"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseThree"
+                          aria-expanded="false"
+                          aria-controls="collapseThree"
+                        >
+                          Can LED Light Therapy be used for post-surgery
+                          scarring?
+                        </button>
+                        <i class="fa-solid fa-chevron-down"></i>
+                      </h2>
+                    </div>
+                    <div
+                      id="collapseThree"
+                      class="collapse"
+                      aria-labelledby="headingThree"
+                      data-parent="#accordionExample"
+                    >
+                      <div class="card-body">
+                        And lastly, the placeholder content for the third and
+                        final accordion panel. This panel is hidden by default.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingTwo">
+                      <h2 class="mb-0">
+                        <button
+                          class="btn btn-link btn-block text-left collapsed"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo"
+                        >
+                          What is Facial Discoloration Treatment?
+                        </button>
+                        <i class="fa-solid fa-chevron-down"></i>
+                      </h2>
+                    </div>
+                    <div
+                      id="collapseTwo"
+                      class="collapse"
+                      aria-labelledby="headingTwo"
+                      data-parent="#accordionExample"
+                    >
+                      <div class="card-body">
+                        Some placeholder content for the second accordion panel.
+                        This panel is hidden by default.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <h2 class="mb-0">
+                        <button
+                          class="btn btn-link btn-block text-left collapsed"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseThree"
+                          aria-expanded="false"
+                          aria-controls="collapseThree"
+                        >
+                          How does it work?
+                        </button>
+                        <i class="fa-solid fa-chevron-down"></i>
+                      </h2>
+                    </div>
+                    <div
+                      id="collapseThree"
+                      class="collapse"
+                      aria-labelledby="headingThree"
+                      data-parent="#accordionExample"
+                    >
+                      <div class="card-body">
+                        And lastly, the placeholder content for the third and
+                        final accordion panel. This panel is hidden by default.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="treatment_gallery">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="text_container">
+                <h3>Hydra Therapy <em>Treatments</em></h3>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Neque, id maxime deleniti commodi accusantium tempore quia
+                  dolores asperiores nemo minus?
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="gallery_slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./images/t1.png" alt="" />
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="./images/t2.png" alt="" />
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="./images/t3.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="footer_img">
+                <img src="./images/logo.svg" alt="" />
+              </div>
+
+              <div class="newsletter">
+                <input type="text" placeholder="Stay in Touch" />
+                <button>Suscribe</button>
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <div class="footer_info">
+                <div class="locations">
+                  <div class="loc_card">
+                    <h4>Lalitpur</h4>
+
+                    <label>Address</label>
+                    <p>Lalitpur, Krishna Galli 5th Floor Bhatbhateni</p>
+
+                    <label>Tel:</label>
+                    <p>977 9851080710, 9801304856</p>
+                  </div>
+
+                  <div class="loc_card">
+                    <h4>Kathmandu</h4>
+
+                    <label>Address</label>
+                    <p>Maharajgunj, Chakrapath, Metro Kathmandu Hospital</p>
+
+                    <label>Tel:</label>
+                    <p>977 01 254685</p>
+                  </div>
+                </div>
+
+                <div class="socail_links">
+                  <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href=""><i class="fa-brands fa-instagram"></i></a>
+                  <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer_bottom">
+            <div class="copyright">
+              <p>© COPYRIGHT 2022. ALL RIGHTS RESERVED</p>
+            </div>
+
+            <div class="goto_top">
+              <a href="">
+                <i class="fa-solid fa-arrow-up"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js"></script>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/main.js"></script>
+
+  <script>
+    var divisor = document.getElementById("divisor"),
+      handle = document.getElementById("handle"),
+      slider = document.getElementById("slider"),
+      overlay = document.getElementById("overlay");
+
+    slider.addEventListener("mouseover", () => {
+      overlay.style.display = "none";
+    });
+
+    slider.addEventListener("mouseout", () => {
+      overlay.style.display = "block";
+    });
+
+    function moveDivisor() {
+      handle.style.left = slider.value + "%";
+      divisor.style.width = slider.value + "%";
+    }
+
+    window.onload = function () {
+      moveDivisor();
+    };
+  </script>
+</html>

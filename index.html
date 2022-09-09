@@ -65,6 +65,100 @@
       </div>
     </header>
 
+    <div class="home_click women-section">
+      <div class="close_btn" onclick="closeWomenSection()">
+        <i class="far fa-times-circle"></i>
+      </div>
+      <div class="content" id="for-women">
+        <div
+          class="image_background"
+          style="background: url(./images/female2.jpg)"
+        ></div>
+
+        <div class="text_container">
+          <h3>Treatment we offer</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem est,
+            vero atque iusto pariatur recusandae quas, consequatur nesciunt
+            fugit sapiente eveniet sed.
+          </p>
+
+          <div class="treat_list">
+            <div class="list">
+              <img src="./images/antiaging.jpg" alt="" />
+
+              <a href="service-detail.html">Facial Rejuvenation</a>
+            </div>
+
+            <div class="list">
+              <img src="./images/about1.jpg" alt="" />
+
+              <a href="service-detail.html">CO2RE Intima</a>
+            </div>
+
+            <div class="list">
+              <img src="./images/body_scuplting.jpg" alt="" />
+
+              <a href="service-detail.html">Peels & Facials</a>
+            </div>
+
+            <div class="list">
+              <img src="./images/bloglist2.jpg" alt="" />
+
+              <a href="service-detail.html">Facial Rejuvenation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home_click men-section">
+      <div class="close_btn" onclick="closeMenSection()">
+        <i class="far fa-times-circle"></i>
+      </div>
+      <div class="content" id="for-men">
+        <div
+          class="image_background"
+          style="background: url(./images/male.jpg)"
+        ></div>
+
+        <div class="text_container">
+          <h3>Treatment we offer</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem est,
+            vero atque iusto pariatur recusandae quas, consequatur nesciunt
+            fugit sapiente eveniet sed.
+          </p>
+
+          <div class="treat_list">
+            <div class="list">
+              <img src="./images/antiaging.jpg" alt="" />
+
+              <a href="service-detail.html">Facial Rejuvenation</a>
+            </div>
+
+            <div class="list">
+              <img src="./images/about1.jpg" alt="" />
+
+              <a href="service-detail.html">CO2RE Intima</a>
+            </div>
+
+            <div class="list">
+              <img src="./images/body_scuplting.jpg" alt="" />
+
+              <a href="">Peels & Facials</a>
+            </div>
+
+            <div class="list">
+              <img src="./images/bloglist2.jpg" alt="" />
+
+              <a href="">Facial Rejuvenation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="scrollContainer">
       <section class="banner video_banner">
         <video
@@ -178,7 +272,7 @@
 
       <section class="treatments">
         <div class="options">
-          <div class="option_for" id="option_for_female">
+          <div class="option_for" id="option_for_female" onclick="showWomen()">
             <div>
               <h5>Selection</h5>
               <h3>Female</h3>
@@ -186,7 +280,7 @@
             </div>
           </div>
 
-          <div class="option_for" id="option_for_male">
+          <div class="option_for" id="option_for_male" onclick="showMen()">
             <div>
               <h5>Selection</h5>
               <h3>Male</h3>
@@ -324,7 +418,7 @@
 
       <section class="clients">
         <div class="container">
-          <div class="client_head">
+          <div class="client_head text_container">
             <h3>What people are saying about us</h3>
           </div>
 

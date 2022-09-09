@@ -1,3 +1,24 @@
+function showMen() {
+  var box = document.querySelector(".men-section");
+  fixedTl.restart();
+  box.classList.add("show");
+}
+function showWomen() {
+  var box = document.querySelector(".women-section");
+  fixedTl.restart();
+  box.classList.add("show");
+}
+
+function closeWomenSection() {
+  var box = document.querySelector(".women-section");
+  box.classList.remove("show");
+}
+
+function closeMenSection() {
+  var box = document.querySelector(".men-section");
+  box.classList.remove("show");
+}
+
 gsap.registerPlugin(ScrollTrigger);
 
 const locoScroll = new LocomotiveScroll({
@@ -28,6 +49,35 @@ ScrollTrigger.scrollerProxy(".scrollContainer", {
     ? "transform"
     : "fixed",
 });
+
+const fixedTl = gsap.timeline({ paused: true });
+
+fixedTl
+  .from(".home_click .image_background", {
+    webkitClipPath: "inset(10% 10% 10% 10%)",
+    clipPath: "inset(10% 10% 10% 10%)",
+    scale: 1.4,
+    duration: 1.5,
+  })
+
+  .from(
+    ".home_click h3, .home_click p",
+    {
+      opacity: 0,
+      y: 30,
+    },
+    "0.5"
+  )
+
+  .from(
+    ".home_click .treat_list .list",
+    {
+      opacity: 0,
+      yPercent: 50,
+      // stagger: 0.5,
+    },
+    "0"
+  );
 
 gsap.to(".header", {
   scrollTrigger: {
@@ -76,8 +126,10 @@ imageContainers.forEach((container) => {
 let textContainers = document.querySelectorAll(".text_container");
 
 textContainers.forEach((container) => {
-  let heading = container.querySelector("h3");
+  let heading = container.querySelector("h3,h4");
   let paragraph = container.querySelectorAll("p");
+  let label = container.querySelectorAll("label");
+  let list = container.querySelectorAll("ul li");
 
   let tl = gsap.timeline({
     scrollTrigger: {
@@ -87,12 +139,24 @@ textContainers.forEach((container) => {
     },
   });
 
-  tl.from(heading, 1, {
-    yPercent: 100,
+  tl.from(label, 1, {
+    yPercent: 200,
     opacity: 0,
 
     ease: Power2.out,
   });
+
+  tl.from(
+    heading,
+    1,
+    {
+      yPercent: 100,
+      opacity: 0,
+
+      ease: Power2.out,
+    },
+    "0"
+  );
 
   tl.from(
     paragraph,
@@ -101,6 +165,18 @@ textContainers.forEach((container) => {
       opacity: 0,
       stagger: 0.5,
       yPercent: 100,
+      ease: Power2.out,
+    },
+    "0.5"
+  );
+
+  tl.from(
+    list,
+    1,
+    {
+      yPercent: 100,
+      opacity: 0,
+      stagger: 0.5,
       ease: Power2.out,
     },
     "0.5"
@@ -180,6 +256,19 @@ gsap.from(".treatments", {
     toggleActions: "restart none none reset",
   },
   scaleX: 0.95,
+});
+
+gsap.from(".image_background", {
+  scrollTrigger: {
+    trigger: ".about_big",
+    start: "top center+=10%",
+    scroller: ".scrollContainer",
+    toggleActions: "restart none none reset",
+  },
+  webkitClipPath: "inset(25% 25% 25% 25%)",
+  clipPath: "inset(25% 25% 25% 25%)",
+  scale: 1.4,
+  duration: 1.5,
 });
 
 // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
