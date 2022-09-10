@@ -11,11 +11,13 @@ function showWomen() {
 
 function closeWomenSection() {
   var box = document.querySelector(".women-section");
+  fixedTl.reverse();
   box.classList.remove("show");
 }
 
 function closeMenSection() {
   var box = document.querySelector(".men-section");
+  fixedTl.reverse();
   box.classList.remove("show");
 }
 

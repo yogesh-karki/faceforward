@@ -906,10 +906,13 @@ footer {
 .home_click {
   position: relative;
   z-index: 9;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: 1.2s;
 
   .close_btn {
-    position: absolute;
+    position: fixed;
     z-index: 9;
     top: 20px;
     right: 100px;
@@ -922,7 +925,9 @@ footer {
   }
 
   &.show {
-    display: block;
+    opacity: 1;
+    overflow: visible;
+    visibility: visible;
   }
 
   .content {
@@ -986,6 +991,19 @@ footer {
     }
 
     &#for-women {
+      .image_background {
+        &::after {
+          background: rgba(20, 154, 154, 0.38);
+          border-radius: 16px;
+          backdrop-filter: blur(10.9px);
+          border: 1px solid rgba(255, 255, 255, 0.25);
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          content: "";
+        }
+      }
+
       &::after {
         background: #e974ae;
         opacity: 0.2;
@@ -999,6 +1017,19 @@ footer {
     }
 
     &#for-men {
+      .image_background {
+        &::after {
+          background: rgba(233, 126, 179, 0.38);
+          border-radius: 16px;
+          backdrop-filter: blur(10.9px);
+          border: 1px solid rgba(255, 255, 255, 0.25);
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          content: "";
+        }
+      }
+
       .text_container {
         &::-webkit-scrollbar-thumb {
           background-color: #149a9a;
@@ -1065,6 +1096,37 @@ footer {
   }
 }
 
+.menu_click {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 3;
+  display: none;
+
+  &.active {
+    span {
+      &:first-child {
+        transform: rotate(-45deg);
+      }
+
+      &:last-child {
+        transform: rotate(45deg) translate(-7px, -7px);
+      }
+    }
+  }
+
+  span {
+    background-color: #212529;
+    display: block;
+    height: 1px;
+    margin: 10px 0;
+    transition: 0.5s;
+    width: 40px;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .container {
     max-width: 1250px;
@@ -1072,20 +1134,63 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
-  header {
-    display: none;
+  .menu_click {
+    display: block;
   }
 
-  .home_click {
-    .content {
-      padding: 10px;
+  header {
+    background-color: #fff;
+    .nav_menu {
+      position: absolute;
+      width: 100vw;
+      background: #fff;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.8s;
+
+      &.show {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      a,
+      p {
+        color: #1d1c1b;
+      }
+
+      ul {
+        display: block;
+        width: 100%;
+
+        li {
+          text-align: center;
+          margin: 15px 0;
+
+          &.nav_btn {
+            a {
+              background: #e974ae;
+            }
+          }
+        }
+      }
     }
   }
 
-  .intro {
-    .intro_text {
-      padding-left: 0;
-      margin-top: 30px;
+  .home_click {
+    .close_btn {
+      right: 50px;
+    }
+
+    .content {
+      padding: 10px;
     }
   }
 
@@ -1158,6 +1263,26 @@ footer {
       .loc_card {
         width: 100%;
         margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .intro {
+    .intro_text {
+      padding-left: 0;
+      margin-top: 30px;
+    }
+  }
+
+  .treatments {
+    .options {
+      height: 530px;
+      flex-direction: column;
+
+      .option_for {
+        width: 100%;
       }
     }
   }

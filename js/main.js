@@ -1,3 +1,11 @@
+let headerButton = document.querySelector(".menu_click");
+let navBox = document.querySelector(".nav_menu");
+
+headerButton.addEventListener("click", () => {
+  navBox.classList.toggle("show");
+  headerButton.classList.toggle("active");
+});
+
 var swiper = new Swiper(".banner_slider", {
   speed: 1500,
   parallax: true,

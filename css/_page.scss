@@ -622,26 +622,6 @@
       width: 65%;
     }
   }
-
-  .schedule_btn {
-    text-align: center;
-    padding-top: 60px;
-
-    a {
-      display: inline-flex;
-      height: 52px;
-      background: #e974ae;
-      color: #fff;
-      justify-content: center;
-      align-items: center;
-      padding: 0 35px;
-      text-transform: uppercase;
-
-      i {
-        margin-left: 12px;
-      }
-    }
-  }
 }
 
 .faqs {
@@ -711,6 +691,26 @@
 .btn.focus,
 .btn:focus {
   box-shadow: none;
+}
+
+.schedule_btn {
+  text-align: center;
+  padding-top: 60px;
+
+  a {
+    display: inline-flex;
+    height: 52px;
+    background: #e974ae;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    padding: 0 35px;
+    text-transform: uppercase;
+
+    i {
+      margin-left: 12px;
+    }
+  }
 }
 
 .treatment_photo {
@@ -894,6 +894,7 @@
   .swiper-pagination {
     text-align: right;
     font-family: "Ivy Mode";
+    font-weight: 300;
   }
 }
 
@@ -982,6 +983,63 @@
         height: 350px;
         object-fit: cover;
       }
+    }
+  }
+}
+
+.appointment {
+  background-position: center !important;
+  background-size: cover !important;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .wrap {
+    background: #fff;
+    width: 50%;
+    margin-left: auto;
+    padding: 40px;
+    margin: 100px 0 100px auto;
+  }
+
+  .text_container {
+    max-width: 85%;
+    text-align: center;
+    margin: 20px auto;
+
+    h3 {
+      margin-bottom: 15px;
+    }
+  }
+
+  .form_wrap {
+    margin: 15px 0;
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #bbbbbb;
+      font-size: 16px;
+      font-weight: 300;
+      height: 42px;
+
+      &:focus {
+        outline: 1px solid #e974ae;
+        box-shadow: none;
+      }
+    }
+
+    textarea {
+      height: 100px;
     }
   }
 }
