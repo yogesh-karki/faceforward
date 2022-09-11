@@ -1269,6 +1269,11 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
+  .scrollContainer {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
   .intro {
     .intro_text {
       padding-left: 0;

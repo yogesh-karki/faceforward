@@ -1304,6 +1304,10 @@ footer .footer_bottom .goto_top::before {
 }
 
 @media screen and (max-width: 500px) {
+  .scrollContainer {
+    max-width: 100%;
+    overflow: hidden;
+  }
   .intro .intro_text {
     padding-left: 0;
     margin-top: 30px;
@@ -2401,5 +2405,77 @@ footer .footer_bottom .goto_top::before {
 
 .appointment .form_wrap textarea {
   height: 100px;
+}
+
+@media screen and (max-width: 500px) {
+  .banner .text_wrap h1 {
+    font-size: 52px;
+  }
+  .about_big {
+    max-width: 100vw;
+    overflow: hidden;
+  }
+  .about_big .img {
+    display: none;
+  }
+  .about_big .text h3 {
+    font-size: 32px;
+  }
+  .team {
+    margin-bottom: 0;
+  }
+  .team .team_card {
+    margin-bottom: 30px;
+  }
+  .team .team_card .team_img {
+    width: 100%;
+  }
+  .team .team_card .team_img img {
+    width: 100%;
+  }
+  .team .team_card .text {
+    width: 100%;
+    padding-left: 0;
+  }
+  .mission .row .col-md-4:nth-child(even) {
+    margin-top: 0;
+  }
+  .choose .text {
+    padding-right: 0;
+  }
+  .choose .img img {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .blogs_lists .blog_list_card.flex_list a .img {
+    width: 100%;
+  }
+  .blogs_lists .blog_list_card.flex_list a .desc {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .blogs_lists .blog_list_card img {
+    height: 265px;
+  }
+  .listing_new .card .image_container {
+    width: 100%;
+  }
+  .listing_new .card .links {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .contact_text {
+    margin-bottom: 40px;
+  }
+  .appointment .wrap {
+    width: 100%;
+  }
+  .appointment .text_container {
+    max-width: 100%;
+    margin: 0;
+  }
+  .appointment .text_container h3 {
+    font-size: 32px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

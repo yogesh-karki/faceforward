@@ -1043,3 +1043,117 @@
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .banner {
+    .text_wrap {
+      h1 {
+        font-size: 52px;
+      }
+    }
+  }
+
+  .about_big {
+    max-width: 100vw;
+    overflow: hidden;
+
+    .img {
+      display: none;
+    }
+
+    .text {
+      h3 {
+        font-size: 32px;
+      }
+    }
+  }
+
+  .team {
+    margin-bottom: 0;
+
+    .team_card {
+      margin-bottom: 30px;
+
+      .team_img {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .text {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+  }
+
+  .mission .row .col-md-4:nth-child(even) {
+    margin-top: 0;
+  }
+
+  .choose {
+    .text {
+      padding-right: 0;
+    }
+
+    .img {
+      img {
+        width: 100%;
+        margin-top: 40px;
+      }
+    }
+  }
+
+  .blogs_lists {
+    .blog_list_card {
+      &.flex_list a {
+        .img {
+          width: 100%;
+        }
+
+        .desc {
+          width: 100%;
+          padding: 20px 0;
+        }
+      }
+
+      img {
+        height: 265px;
+      }
+    }
+  }
+
+  .listing_new {
+    .card {
+      .image_container {
+        width: 100%;
+      }
+
+      .links {
+        width: 100%;
+        padding: 20px 0;
+      }
+    }
+  }
+
+  .contact_text {
+    margin-bottom: 40px;
+  }
+
+  .appointment {
+    .wrap {
+      width: 100%;
+    }
+
+    .text_container {
+      max-width: 100%;
+      margin: 0;
+
+      h3 {
+        font-size: 32px;
+      }
+    }
+  }
+}
