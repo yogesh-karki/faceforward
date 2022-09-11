@@ -1194,8 +1194,13 @@ footer {
     }
   }
 
-  section.div_anim {
-    display: none;
+  // section.div_anim {
+  //   display: none;
+  // }
+
+  .div_anim h3 {
+    font-size: 30px;
+    max-width: 80%;
   }
 
   .experiments {
